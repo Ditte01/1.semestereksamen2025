@@ -8,8 +8,155 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
+<header class="header">
+
+    <div class="header-inner">
+
+        <button class="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <h1 class="side-title">Connected Starters</h1>
+
+        <nav class="navbar-desktop">
+            <a href="index.html">Forside</a>
+            <a href="hvad%20kan%20du%20deltage%20i.html">Hvad kan du deltage i?</a>
+            <a href="det%20får%20du%20med%20dig.html">Det får du med dig</a>
+            <a href="#">Om os</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<nav class="navbar-mobil" id="navbarMobil">
+    <a href="index.html">Forside</a>
+    <a href="hvad%20kan%20du%20deltage%20i.html">Hvad kan du deltage i?</a>
+    <a href="det%20får%20du%20med%20dig.html">Det får du med dig</a>
+    <a href="#">Om os</a>
+</nav>
+
+
+<section class="hero">
+
+    <div class="hero-media">
+        <video
+            autoplay
+            loop
+            playsinline
+            class="hero-video">
+            <source src="Forside%20hero.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-logo">
+            <img src="images/Connected%20Startes%20logo.svg" alt="Connected Starters">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="intro">
+
+    <h2>Velkommen til fællesskabet</h2>
+
+    <div class="intro-boks">
+        <p>
+            Connected Starters er til dig, som ønsker at booste dit mod og
+            muligheder for at starte din egen virksomhed.
+            Zealand studerende og unge iværksættere i hele Region Sjælland
+            er velkomne.
+        </p>
+
+        <a href="#" class="knap">Om os</a>
+    </div>
+
+</section>
+
+<section class="miljøer">
+    <h2>Vores iværksættermiljøer</h2>
+
+    <div class="mil-grid">
+
+        <article class="mil-kort">
+            <h3>Slagelse</h3>
+            <div class="mil-billede">
+                <img src="images/Slagelse.jpg" alt="Slagelse miljø">
+            </div>
+
+            <a href="hvad%20kan%20du%20deltage%20i.html" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Køge</h3>
+            <div class="mil-billede">
+                <img src="images/Køge.jpg" alt="Køge miljø">
+            </div>
+
+            <a href="hvad%20kan%20du%20deltage%20i.html" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Næstved</h3>
+            <div class="mil-billede">
+                <img src="images/Næstved.jpg" alt="Næstved miljø">
+            </div>
+
+            <a href="hvad%20kan%20du%20deltage%20i.html" class="knap">Læs mere</a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-venstre">
+            <p>+45 0123456789</p>
+            <p>cs@zealand.dk</p>
+            <p>CVR: 12345678</p>
+        </div>
+
+        <div class="footer-logo">
+            <img src="images/Connected%20Startes%20logo.svg" alt="Connected Starters">
+        </div>
+
+        <div class="footer-højre">
+            <a href="https://www.instagram.com/zealand_academy/">Instagram</a>
+            <a href="https://www.facebook.com/zealandacademy/">Facebook</a>
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    const burger = document.querySelector('.burger');
+    const mobileNav = document.getElementById('navbarMobil');
+    const mobileLinks = mobileNav.querySelectorAll('a');
+
+    /* Åbn/luk menu via burger */
+    burger.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+    });
+
+    /* Luk menu når der klikkes på et link */
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 </html>
