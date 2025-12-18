@@ -5,12 +5,191 @@
     <title>Hvad kan du deltage i?</title>
 
     <link rel="stylesheet" href="style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
+
 <body>
 
+<header class="header">
+
+    <div class="header-inner">
+
+        <button class="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <h1 class="side-title">Connected Starters</h1>
+
+        <nav class="navbar-desktop">
+            <a href="index.html">Forside</a>
+            <a href="hvad%20kan%20du%20deltage%20i.html">Hvad kan du deltage i?</a>
+            <a href="det%20får%20du%20med%20dig.html">Det får du med dig</a>
+            <a href="#">Om os</a>
+        </nav>
+
+    </div>
+
+    <nav class="navbar-mobil" id="navbarMobil">
+        <a href="index.html">Forside</a>
+        <a href="hvad%20kan%20du%20deltage%20i.html">Hvad kan du deltage i?</a>
+        <a href="det%20får%20du%20med%20dig.html">Det får du med dig</a>
+        <a href="#">Om os</a>
+    </nav>
+
+</header>
 
 
+
+<section class="hero-billede">
+
+    <div class="hero-media">
+
+        <img src="images/Underside1%20hero.jpg" alt="Hero 1 billede">
+
+        <div class="hero-tekst">
+           <h1>Hvad kan du deltage i?</h1>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="intro">
+
+    <div class="intro-boks">
+        <p>
+            Hos os er der mange forskellige fællesskaber, miljøer og aktiviteter,
+            som du kan deltage i. Vi håber du har lyst til at være med og udforske
+            din indre iværksætter.
+        </p>
+
+        <a href="#" class="knap">Se miljøer</a>
+    </div>
+
+</section>
+
+<section class="miljøer">
+    <h2>Det kan du deltage i</h2>
+
+    <div class="mil-grid">
+
+        <article class="mil-kort">
+            <h3>Workshops</h3>
+
+            <div class="mil-billede">
+                <img src="images/Workshops.jpg" alt="Workshops">
+            </div>
+
+            <a href="#" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Coachingforløbs</h3>
+
+            <div class="mil-billede">
+                <img src="images/Coaching.jpg" alt="Coachingforløbs">
+            </div>
+
+            <a href="#" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Innovationslab</h3>
+
+            <div class="mil-billede">
+                <img src="images/Innovationslab.jpg" alt="Innovationslab">
+            </div>
+
+            <a href="#" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Netværking</h3>
+
+            <div class="mil-billede">
+                <img src="images/Netværking.jpg" alt="Netværking">
+            </div>
+
+            <a href="#" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Torsdagssaloner</h3>
+
+            <div class="mil-billede">
+                <img src="images/Torsdagssaloner.jpg" alt="Torsdagssaloner">
+            </div>
+
+            <a href="#" class="knap">Læs mere</a>
+
+        </article>
+
+        <article class="mil-kort">
+            <h3>Konkurrencer</h3>
+
+            <div class="mil-billede">
+                <img src="images/Konkurrencr.jpg" alt="Konkurrencer">
+            </div>
+
+            <a href="#" class="knap">Læs mere</a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="CTA">
+    <a href="det%20får%20du%20med%20dig.html" class="knap stor">Det får du med</a>
+</section>
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-venstre">
+            <p>+45 0123456789</p>
+            <p>cs@zealand.dk</p>
+            <p>CVR: 12345678</p>
+        </div>
+
+        <div class="footer-logo">
+            <img src="images/Connected%20Startes%20logo.svg" alt="Connected Starters">
+        </div>
+
+        <div class="footer-højre">
+            <a href="https://www.instagram.com/zealand_academy/">Instagram</a>
+            <a href="https://www.facebook.com/zealandacademy/">Facebook</a>
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    const burger = document.querySelector('.burger');
+    const mobileNav = document.getElementById('navbarMobil');
+    const mobileLinks = mobileNav.querySelectorAll('a');
+
+    /* Åbn/luk menu via burger */
+    burger.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+    });
+
+    /* Luk menu når der klikkes på et link */
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 </html>

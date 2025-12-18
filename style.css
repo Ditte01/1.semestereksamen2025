@@ -44,8 +44,9 @@ img {
 }
 
 .side-title {
-    font-size: xxx-large;
+    font-size: x-large;
     font-weight: bold;
+    font-family: var(--font-display), sans-serif;
 }
 
 .burger {
@@ -83,7 +84,7 @@ img {
 .hero-video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     opacity: 0.8;
 }
 
@@ -101,6 +102,25 @@ img {
     width: 650px;
 }
 
+.hero-billede img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    opacity: 0.8;
+}
+
+.hero-tekst {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
 /* --------------------
    Intro
 -------------------- */
@@ -113,18 +133,20 @@ img {
 .intro h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
+    font-family: var(--font-display), sans-serif;
 }
 
 .intro-boks {
     background-color: rgba(250, 239, 132, 0.8);
     padding: 2rem 1.5rem;
-    border-radius: 6px;
+    border-radius: 30px;
     max-width: 520px;
     margin: 0 auto;
 }
 
 .intro-boks p {
     margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 .knap {
@@ -150,16 +172,26 @@ img {
 .miljøer h2 {
     font-size: 1.8rem;
     margin-bottom: 2.5rem;
+    font-family: var(--font-display), sans-serif;
 }
 
 .mil-grid {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.mil-kort {
+    max-width: 320px;
+    width: 100%;
 }
 
 .mil-kort h3 {
     background-color: rgba(250, 239, 132, 0.8);
-    padding: 0.4rem 9rem;
+    padding: 0.4rem 5rem;
     display: inline-block;
     margin-bottom: 0.8rem;
 }
@@ -176,6 +208,18 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.CTA {
+    padding: 4rem 1.5rem;
+    text-align: center;
+    font-size: x-large;
+    font-family: var(--font-display), sans-serif;
+    
+}
+
+.knap.stor {
+    padding: 0.9rem 2rem;
 }
 
 .footer {
@@ -277,11 +321,7 @@ img {
         margin: 0 auto;
     }
 
-    
 }
-
-
-
 
 /* --------------------
    Mobile navigation
